@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Fornecedor e Produto</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Fluig Style Guide CSS -->
+    <link
+      rel="stylesheet"
+      href="https://style.fluig.com/css/fluig-style-guide.min.css"
+    />
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <main class="container my-4">
+      <header>
+        <h1 class="text-center">CADASTRO FORNECEDOR/PRODUTO</h1>
+      </header>
+      <!-- Seção container -->
+      <section class="mb-5 col-md-10">
+        <!-- Cabeçalho Dados do Fornecedor -->
+        <div class="bg-info radius-top text-white p-2 pl-3">
+          <h2 class="mb-0">Dados do Fornecedor</h2>
+        </div>
+
+        <!-- Formulário -->
+        <form action="">
+          <!-- seção dados do fornecedor -->
+          <section
+            id="form-fornecedor"
+            class="p-3 borda-solida radius-bottom border-top-0-custom"
+          >
+            <div class="form-row">
+              <div class="form-group col-md-8">
+                <!-- Razão Social -->
+                <label for="razaoSocial">Razão Social</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="razaoSocial"
+                  name="razaoSocial"
+                  required
+                />
+                <!-- Nome Fantasia -->
+                <label for="nomeFantasia">Nome Fantasia</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="nomeFantasia"
+                  name="nomeFantasia"
+                  required
+                />
+                <!-- CEP -->
+                <div class="form-group p-0 col-md-6">
+                  <label for="cep">CEP</label>
+                  <input
+                    type="text"
+                    class="borda-solida radius form-control"
+                    id="cep"
+                    name="cep"
+                    autocomplete="postal-code"
+                    inputmode="numeric"
+                    maxlength="9"
+                    required
+                  />
+                </div>
+                <!-- Endereço -->
+                <label for="endereco">Endereço</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="endereco"
+                  name="endereco"
+                  required
+                />
+              </div>
+              <div class="form-group col-md-4">
+                <!-- CNPJ -->
+                <label for="cnpj">CNPJ</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="cnpj"
+                  name="cnpj"
+                  inputmode="numeric"
+                  maxlength="18"
+                  required
+                />
+                <!-- INSCRIÇÃO ESTADUAL -->
+                <label for="inscricaoEstadual">Inscrição Estadual</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="inscricaoEstadual"
+                  name="inscricaoEstadual"
+                />
+                <!-- INSCRIÇÃO MUNICIPAL -->
+                <label for="inscricaoMunicipal">Inscrição Municipal</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="inscricaoMunicipal"
+                  name="inscricaoMunicipal"
+                />
+                <!-- NUMERO -->
+                <label for="numero">Número</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="numero"
+                  name="numero"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <!-- COMPLEMENTO -->
+              <div class="form-group col-md-12">
+                <label for="complemento">Complemento</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="complemento"
+                  name="complemento"
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <!-- BAIRRO -->
+              <div class="form-group col-md-4">
+                <label for="bairro">Bairro</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="bairro"
+                  name="bairro"
+                />
+              </div>
+              <!-- MUNICIPIO -->
+              <div class="form-group col-md-4">
+                <label for="municipio">Município</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="municipio"
+                  name="municipio"
+                  readonly
+                />
+              </div>
+              <!-- ESTADO -->
+              <div class="form-group col-md-4">
+                <label for="estado">Estado</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="estado"
+                  name="estado"
+                  readonly
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <!-- Nome da Pessoa de Contato -->
+              <div class="form-group col-md-6">
+                <label for="nomeContato">Nome da Pessoa de Contato</label>
+                <input
+                  type="text"
+                  class="borda-solida radius form-control"
+                  id="nomeContato"
+                  name="nomeContato"
+                  pattern="^[A-Za-zÀ-ÿ\s]+$"
+                  title="Digite apenas letras e espaços"
+                  required
+                />
+              </div>
+              <!-- Telefone -->
+              <div class="form-group col-md-3">
+                <label for="telefone">Telefone</label>
+                <input
+                  type="tel"
+                  class="borda-solida radius form-control"
+                  id="telefone"
+                  name="telefone"
+                  inputmode="numeric"
+                  maxlength="15"
+                  required
+                />
+              </div>
+              <!-- E-mail  -->
+              <div class="form-group col-md-3">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  class="borda-solida radius form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+            </div>
+          </section>
+
+          <!-- Cabeçalho Produtos -->
+          <div class="mt-4 bg-info radius-top text-white p-2 pl-3">
+            <h2 class="mb-0">Produtos</h2>
+          </div>
+          <!-- seção produtos -->
+          <section class="p-3 borda-solida radius-bottom border-top-0-custom">
+            <div id="lista-produtos"></div>
+            <button
+              type="button"
+              id="btnAddProduto"
+              class="btn-verde w-100 radius"
+            >
+              Adicionar Produto
+            </button>
+          </section>
+
+          <!-- Template Produto -->
+          <template id="tpl-produto">
+            <div class="produto-item d-flex align-items-stretch mb-3">
+              <!-- Lixeira ao lado -->
+              <div class="d-flex align-items-start p-4">
+                <button
+                  type="button"
+                  class="borda-solida btn-delete radius"
+                  title="Excluir"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-trash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                    />
+                    <path
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Cartão -->
+              <div class="produto-card borda-solida radius p-3 w-100">
+                <div class="row no-gutters">
+                  <!-- Ícone redondo à esquerda -->
+                  <div class="col-auto d-flex align-items-center pr-3">
+                    <div
+                      class="produto-icone d-flex align-items-center justify-content-center"
+                    >
+                      <img
+                        src="assets/box.png"
+                        alt="Produto"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Campos à direita -->
+                  <div class="col">
+                    <strong class="produto-titulo"
+                      >Produto - <span class="idx">1</span></strong
+                    >
+
+                    <div class="form-group mt-2">
+                      <label>Produto</label>
+                      <input
+                        type="text"
+                        class="form-control borda-solida radius"
+                        name="descricao[]"
+                        required
+                      />
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-md-3">
+                        <label>UND. Medida</label>
+                        <select
+                          class="form-control borda-solida radius"
+                          name="unidade[]"
+                          required
+                        >
+                          <option value="">Selecione</option>
+                          <option>UN</option>
+                          <option>KG</option>
+                          <option>CX</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-md-3">
+                        <label>QTDE. em Estoque</label>
+                        <input
+                          type="number"
+                          class="form-control borda-solida radius"
+                          name="qtde[]"
+                          min="0"
+                          step="1"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group col-md-3">
+                        <label>Valor Unitário</label>
+                        <input
+                          type="number"
+                          class="form-control borda-solida radius"
+                          name="valorUnitario[]"
+                          min="0"
+                          step="0.01"
+                          required
+                        />
+                      </div>
+
+                      <div class="form-group col-md-3">
+                        <label>Valor Total</label>
+                        <input
+                          type="number"
+                          class="form-control borda-solida radius total"
+                          name="valorTotal[]"
+                          readonly
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+
+          <!-- Cabeçalho Anexos -->
+          <div class="mt-4 bg-info radius-top text-white p-2 pl-3">
+            <h2 class="mb-0">Anexos</h2>
+          </div>
+          <!-- seção Anexos -->
+          <section class="p-3 borda-solida radius-bottom border-top-0-custom">
+            <div id="lista-anexos" class="p-2 mt-2 mb-2 borda-solida radius">
+              <strong class="anexo-titulo">Itens</strong>
+            </div>
+            <!-- input de arquivo oculto (um por clique) -->
+            <input type="file" id="fileAnexo" class="d-none" />
+            <button
+              type="button"
+              id="btnAddAnexo"
+              class="btn-verde w-100 radius"
+            >
+              Incluir Anexo
+            </button>
+          </section>
+
+          <!-- Template Anexos -->
+          <template id="tpl-anexo">
+            <div
+              class="anexo-item align-items-center justify-content-between p-2 mb-2"
+            >
+              <div class="d-block align-items-center">
+                <!-- botão excluir -->
+                <button
+                  type="button"
+                  class="borda-solida btn-delete radius"
+                  title="Excluir"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-trash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"
+                    />
+                    <path
+                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"
+                    />
+                  </svg>
+                </button>
+
+                <!-- botão visualizar (olho com fundo azul) -->
+                <button
+                  type="button"
+                  class="btn btn-sm btn-visualizar radius"
+                  title="Visualizar (download)"
+                >
+                  <!-- seu SVG do olho -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="bi bi-eye"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1
+                   1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13
+                   13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465
+                   1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13
+                   13 0 0 1 1.172 8z"
+                    />
+                    <path
+                      d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0
+                   3.5 3.5 0 0 1-7 0"
+                    />
+                  </svg>
+                </button>
+
+                <!-- nome do arquivo -->
+                <span class="anexo-nome text-truncate"></span>
+              </div>
+            </div>
+          </template>
+
+          <footer class="mt-3">
+            <button type="submit" class="btn-verde w-100 radius">
+              Salvar Fornecedor
+            </button>
+          </footer>
+        </form>
+      </section>
+    </main>
+    <!-- Modal de Loading -->
+    <div
+      class="modal fade"
+      id="loadingModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content text-center p-4">
+          <div class="spinner-border" role="status" aria-hidden="true"></div>
+          <div class="mt-2">Enviando...</div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts necessários -->
+    <!-- jQuery 3.5.1 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Fluig Style Guide JS -->
+    <script src="https://style.fluig.com/js/fluig-style-guide.min.js"></script>
+    <!-- JS personalizado -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
